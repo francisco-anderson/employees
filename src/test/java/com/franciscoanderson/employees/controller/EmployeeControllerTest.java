@@ -1,4 +1,4 @@
-package com.franciscoanderson.employees.rest;
+package com.franciscoanderson.employees.controller;
 
 
 import com.franciscoanderson.employees.entity.Employee;

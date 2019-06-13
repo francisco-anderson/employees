@@ -23,6 +23,7 @@ public class EmployeeVO {
     private String employeeSalary;
     @JsonProperty("employee_age")
     private String employeeAge;
+    @JsonProperty("profile_image")
     private String profileImage;
 
 
