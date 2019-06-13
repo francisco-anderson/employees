@@ -101,6 +101,24 @@ public class EmployeeController {
 
     }
 
+    @DeleteMapping("{id}")
+    @ApiOperation("Apaga os dados de um funcionario")
+    public ResponseEntity<EmployeeVO> deleteEmployee(@ApiParam("id do funcionario")@PathVariable("id") String id){
+
+        Optional<Employee> employerOptional = employeeRepository.findById(id);
+
+        if(!employerOptional.isPresent()){
+            return ResponseEntity.notFound().build();
+        }
+
+        employeeRepository.delete(employerOptional.get());
+
+        return ResponseEntity.ok().build();
+
+
+    }
+
+
 
 
 
